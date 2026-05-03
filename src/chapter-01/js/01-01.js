@@ -1,3 +1,3 @@
 function init() {
-    console.log("Using Three.js version: " + THREE.REVISION);   
+    console.log("Используется следующая версия Three.js: | Using Three.js version: " + THREE.REVISION);   
 }

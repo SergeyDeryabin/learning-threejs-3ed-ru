@@ -78,16 +78,19 @@ function init() {
     function renderScene() {
         stats.update();
 
+        // вращать куб вокруг его осей
         // rotate the cube around its axes
         cube.rotation.x += 0.02;
         cube.rotation.y += 0.02;
         cube.rotation.z += 0.02;
 
+        // Подбрасывать шар вверх и вниз
         // bounce the sphere up and down
         step += 0.04;
         sphere.position.x = 20 + (10 * (Math.cos(step)));
         sphere.position.y = 2 + (10 * Math.abs(Math.sin(step)));
 
+        // Рендеринг с использованием requestAnimationFrame
         // render using requestAnimationFrame
         requestAnimationFrame(renderScene);
         renderer.render(scene, camera);

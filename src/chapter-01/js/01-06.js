@@ -101,10 +101,8 @@ function init() {
     };
 
     var gui = new dat.GUI();
-    // gui.add(controls, 'скорость вращения | rotationSpeed', 0, 0.5);
-    // gui.add(controls, 'скорость отскока | bouncingSpeed', 0, 0.5);
-    gui.add(controls, 'rotationSpeed', 0, 0.5);
-    gui.add(controls, 'bouncingSpeed', 0, 0.5);
+    gui.add(controls, 'rotationSpeed', 0, 0.5).name("Вращение-скорость | rotationSpeed");
+    gui.add(controls, 'bouncingSpeed', 0, 0.5).name("Отскок-скорость | bouncingSpeed");
 
     render();
 

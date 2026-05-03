@@ -117,6 +117,7 @@ function createBoundingWall(scene) {
 }
 
 function createGroundPlane(scene) {
+  // создать плоскость земли
   // create the ground plane
   var planeGeometry = new THREE.PlaneGeometry(70, 50);
   var planeMaterial = new THREE.MeshLambertMaterial({
@@ -125,6 +126,7 @@ function createGroundPlane(scene) {
   var plane = new THREE.Mesh(planeGeometry, planeMaterial);
   plane.receiveShadow = true;
 
+  // Повернуть и расположить плоскость
   // rotate and position the plane
   plane.rotation.x = -0.5 * Math.PI;
   plane.position.x = 15;
@@ -137,7 +139,8 @@ function createGroundPlane(scene) {
 function createHouse(scene) {
   var roof = new THREE.ConeGeometry(5, 4);
   var base = new THREE.CylinderGeometry(5, 5, 6);
-
+  
+  // создать мешь
   // create the mesh
   var roofMesh = new THREE.Mesh(roof, new THREE.MeshLambertMaterial({
     color: 0x8b7213
@@ -159,6 +162,8 @@ function createHouse(scene) {
 }
 
 /**
+ * Добавить дерево на сцену
+ * @param scene Сцена, на которую нужно добавить дерево
  * Add the tree to the scene
  * @param scene The scene to add the tree to
  */
@@ -166,6 +171,7 @@ function createTree(scene) {
   var trunk = new THREE.CubeGeometry(1, 8, 1);
   var leaves = new THREE.SphereGeometry(4);
 
+  // создать мешь
   // create the mesh
   var trunkMesh = new THREE.Mesh(trunk, new THREE.MeshLambertMaterial({
     color: 0x8b4513
@@ -174,6 +180,7 @@ function createTree(scene) {
     color: 0x00ff00
   }));
 
+  // Расположите ствол. Установите значение по оси Y равным половине высоты ствола.
   // position the trunk. Set y to half of height of trunk
   trunkMesh.position.set(-10, 4, 0);
   leavesMesh.position.set(-10, 12, 0);

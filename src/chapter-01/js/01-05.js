@@ -84,8 +84,8 @@ function init() {
     };
 
     var gui = new dat.GUI();
-    gui.add(controls, 'rotationSpeed', 0, 0.5);
-    gui.add(controls, 'bouncingSpeed', 0, 0.5);
+ 	gui.add(controls, 'rotationSpeed', 0, 0.5).name("Вращение-скорость | rotationSpeed");
+    gui.add(controls, 'bouncingSpeed', 0, 0.5).name("Отскок-скорость | bouncingSpeed");
 
 
     // attach them here, since appendChild needs to be called first
